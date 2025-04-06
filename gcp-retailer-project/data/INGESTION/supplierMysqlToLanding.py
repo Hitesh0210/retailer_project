@@ -193,3 +193,4 @@ save_logs_to_gcs()
 save_logs_to_bigquery()       
         
 print("✅ Pipeline completed successfully!")
+print("ok done")
