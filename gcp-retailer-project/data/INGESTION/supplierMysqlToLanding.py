@@ -9,9 +9,9 @@ spark = SparkSession.builder.appName("RetailerMySQLToLanding").getOrCreate()
 
 # Google Cloud Storage (GCS) Configuration variables
 GCS_BUCKET = "datalake-project-bkt-0210"
-LANDING_PATH = f"gs://{GCS_BUCKET}/landing/retailer-db/"
-ARCHIVE_PATH = f"gs://{GCS_BUCKET}/landing/retailer-db/archive/"
-CONFIG_FILE_PATH = f"gs://{GCS_BUCKET}/configs/retailer_config.csv"
+LANDING_PATH = f"gs://{GCS_BUCKET}/landing/supplier-db/"
+ARCHIVE_PATH = f"gs://{GCS_BUCKET}/landing/supplier-db/archive/"
+CONFIG_FILE_PATH = f"gs://{GCS_BUCKET}/configs/supplier_config.csv"
 
 LOG_PATH = f"gs://{GCS_BUCKET}/temp/pipeline_logs/"
 
@@ -24,7 +24,7 @@ BQ_TEMP_PATH = f"{GCS_BUCKET}/temp/"
 
 # MySQL Configuration
 MYSQL_CONFIG = {
-    "url": "jdbc:mysql://146.148.37.1:3306/retailerDB02?useSSL=false&allowPublicKeyRetrieval=true",
+    "url": "jdbc:mysql://146.148.37.1:3306/supplierDB02?useSSL=false&allowPublicKeyRetrieval=true",
     "driver": "com.mysql.cj.jdbc.Driver",
     "user": "myuser",
     "password": "mypass02"
